@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 /**
  * fallback=容错类
  */
-@FeignClient(name = "godnan-member",fallback = MemberApiFallBack.class)
+@FeignClient(name = "http://127.0.0.1:8002/",url="http://127.0.0.1:8002/",fallback = MemberApiFallBack.class)
 public interface MemberApi {
 
     @RequestMapping("getMember")

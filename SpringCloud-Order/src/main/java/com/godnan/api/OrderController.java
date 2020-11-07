@@ -2,6 +2,7 @@ package com.godnan.api;
 
 import com.godnan.feign.MemberApi;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
+import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
@@ -13,6 +14,7 @@ import javax.annotation.Resource;
 import java.util.List;
 
 @RestController
+@Api("订单服务")
 public class OrderController {
 
     /**
